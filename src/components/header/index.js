@@ -10,7 +10,10 @@ import {
     TextTide,
     TextLogo,
     Box,
-    ButtonGitHub
+    ButtonGitHub,
+    GitHub,
+    TextButton
+
 } from  "./styles";
 
 function HeaderComponent({theme}) {
@@ -45,7 +48,8 @@ function HeaderComponent({theme}) {
                 </Box>
 
                 <ButtonGitHub>
-                    
+                    <TextButton>Login</TextButton>
+                    <GitHub />
                 </ButtonGitHub>
 
             </Header>

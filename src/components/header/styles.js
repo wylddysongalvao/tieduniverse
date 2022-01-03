@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import theme from 'styled-theming'
+import GitIcon from '../../assets/github.svg';
 
 const backgroundTheme = theme("mode", {
     light: "#000",
@@ -12,10 +13,11 @@ const backgroundText = theme("mode", {
 });
 
 export const Header = styled.header`
-    display: flex;
+    display:flex;
+    flex-direction: row;
     height: 10vh;
-    flex-direction:row,
-    justify-content: center;
+    justify-content:space-between;
+    width: 100vw;
     align-items: center;
     font-family: 'Arimo', sans-serif;
     color: ${backgroundTheme};  
@@ -35,6 +37,7 @@ export const Box = styled.div`
 `;
 
 export const Menu = styled.main`
+    width:100%
 `;
 
 export const Ul = styled.ul`
@@ -62,9 +65,27 @@ export const TextLogo = styled.i`
 
 export const ButtonGitHub = styled.a`
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    width: 100px;
-    height: 30px;
-    background-color: #000;
+    width: 130px;
+    height: 35px;
+    background-color:#fff;
+    cursor: pointer;
+    margin-right: 4rem;
+    border-radius: 3px;
+    transform: 200ms easy-in-out;
+`;
+
+export const GitHub = styled.a`
+    display:block;
+    width:25px;
+    height:25px;
+    background-image: url(${GitIcon});
+    background-size: contain;
+    background-repeat: no-repeat;
+`;
+
+export const TextButton = styled.p`
+    color:#000;
+    font-size: 1.2rem;
 `;
